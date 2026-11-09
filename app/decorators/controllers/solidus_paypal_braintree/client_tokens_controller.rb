@@ -2,7 +2,7 @@
 
 module SolidusPaypalBraintree
   class ClientTokensController < ::Spree::Api::BaseController
-    skip_before_action :authenticate_user
+    skip_before_action :authenticate_user, raise: false
 
     before_action :load_gateway
 
